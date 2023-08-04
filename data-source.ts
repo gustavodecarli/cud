@@ -19,7 +19,7 @@ const AppDataSource = new DataSource({
 
 const AppDataSource = new DataSource({
   type: 'mysql',
-  url: 'mysql://ojkotzn52o0d8zs2n3sl:pscale_pw_RYwREEg82ev2DDrLqxKPl4hJ5UeOuVc5CBOqvhauc6Y@aws.connect.psdb.cloud/cud?sslaccept=strict',
+  url: process.env.DATABASE_URL,
   synchronize: false,
   logging: false,
   entities: [Province],
