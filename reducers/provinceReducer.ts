@@ -7,10 +7,7 @@ export interface ProvinceState {
 }
 
 const initialState: ProvinceState = {
-  provinces: [
-    { id: 1, code: '02', name: 'CABA' },
-    { id: 2, code: '06', name: 'Buenos Aires' }
-  ]
+  provinces: []
 };
 
 export const provindeSlice = createSlice({

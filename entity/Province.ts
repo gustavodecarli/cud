@@ -3,11 +3,11 @@ import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Province extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column({ type: 'text' })
-  code: string;
+  code!: string;
 
   @Column({ type: 'text' })
-  name: string;
+  name!: string;
 }

@@ -49,8 +49,8 @@ async function remove(req: NextApiRequest, res: NextApiResponse) {
 }
 
 async function all(req: NextApiRequest, res: NextApiResponse) {
-  const take: number = req.query.size || 5;
-  const page: number = req.query.page || 0;
+  const take: number = Number(req.query.size) || 5;
+  const page: number = Number(req.query.page) || 0;
 
   const AppDataSource = await getDataSource();
   const [result, total] = await AppDataSource.manager
