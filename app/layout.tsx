@@ -1,9 +1,10 @@
 import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
+import { Suspense } from 'react';
+//import { AppDataSource } from '../data-source';
 import Nav from './nav';
 import Toast from './toast';
-import { Suspense } from 'react';
 
 export const metadata = {
   title: 'Next.js 13 + PlanetScale + NextAuth + Tailwind CSS',
@@ -22,7 +23,9 @@ export default async function RootLayout({
         <Suspense>
           <Nav />
         </Suspense>
+
         {children}
+
         <Analytics />
         <Toast />
       </body>
