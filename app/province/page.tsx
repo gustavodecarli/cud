@@ -9,7 +9,7 @@ import ProvincesTable from './provinces';
 
 //export const dynamic = 'force-dynamic';
 
-export default function Page({ stars }: { stars: number }) {
+export default function Page() {
   /*const AppDataSource = await getDataSource();
 
   const provinces = await AppDataSource.getRepository(Province).find(); */
@@ -18,7 +18,7 @@ export default function Page({ stars }: { stars: number }) {
 
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
-      <Title>Provincias {stars}</Title>
+      <Title>Provincias</Title>
       <Search />
       <Card className="mt-6">
         <ProvincesTable provinces={provinces} />
