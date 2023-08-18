@@ -1,20 +1,23 @@
 'use client';
 
+import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import { Button } from '@tremor/react';
 import { useRouter } from 'next/navigation';
+import { useDispatch } from 'react-redux';
 
 interface EditButtonProps {
   id: number;
-  name: string;
+  edit: ActionCreatorWithPayload<number>;
 }
 
 export default function EditButton(props: EditButtonProps) {
+  const dispatch = useDispatch();
   const { push } = useRouter();
-  //const dispatch = useDispatch();
+  const { pathname } = window.location;
 
   function handle(id: number) {
-    //dispatch(edit(id));
-    push(`${props.name}/form?id=${id}`);
+    dispatch(props.edit(id));
+    push(`${pathname}/form`);
   }
 
   return (

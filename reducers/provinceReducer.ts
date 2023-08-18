@@ -1,37 +1,64 @@
-import { PayloadAction, createSlice, current } from '@reduxjs/toolkit';
+import { fetchAction, removeAction, saveAction } from '../actions/province';
 import { Province } from '../entity/Province';
+import { CRUDState } from '../interfaces/CRUDState';
+import crudReducer from './crudReducer';
 
-export interface ProvinceState {
-  provinces: Array<Province>;
-  province?: Province;
-}
+const initialState: CRUDState<Province> = {
+  data: [],
+  pagination: {
+    page: 0,
+    size: 5,
+    search: '',
+    hasMore: false,
+    isFetching: false
+  },
 
-const initialState: ProvinceState = {
-  provinces: []
+  element: undefined
 };
 
+const provinceSlice = crudReducer(
+  'province',
+  fetchAction,
+  saveAction,
+  removeAction
+);
+
+/*
 export const provindeSlice = createSlice({
   name: 'province',
   initialState,
   reducers: {
-    add: (state: ProvinceState, action: PayloadAction<Province>) => {
-      console.log(action.payload);
-      state.provinces = [...state.provinces, action.payload];
+    add: (state: CRUDState<Province>, action) => {
+      state.element = action.payload;
     },
-    edit: (state: ProvinceState, action: PayloadAction<number>) => {
-      state.province = current(state.provinces).find(
-        (e) => e.id == action.payload
-      );
-    },
-    save: (state: ProvinceState, action: PayloadAction<Province>) => {
+    edit: (state: CRUDState<Province>, action: PayloadAction<number>) => {
+      state.element = current(state.data).find((e) => e.id == action.payload);
+    }
+  },
+  extraReducers: (builder) => {
+    addCaseFetch(builder, fetchAction);
+
+    addCaseSave(builder, saveAction);
+
+    addCaseRemove(builder, removeAction);
+
+    addMatcher(builder);
+
+ 
+    builder.addCase(fetchAction.fulfilled, (state, action) => {
+      state.data = action.payload.result;
+      state.pagination.hasMore = action.payload.hasMore;
+    });
+
+    builder.addCase(saveAction.fulfilled, (state, action) => {
       const { payload } = action;
-      const provincesCurrent = current(state.provinces);
-      let provincesNew = [];
+      const dataCurrent = current(state.data);
+      let dataNew = [];
       if (payload.id === undefined) {
-        payload.id = provincesCurrent.length + 1;
-        provincesNew = [...provincesCurrent, action.payload];
+        payload.id = dataCurrent.length + 1;
+        dataNew = [...dataCurrent, action.payload];
       } else {
-        provincesNew = provincesCurrent.map((e) => {
+        dataNew = dataCurrent.map((e) => {
           if (e.id == action.payload.id) {
             return action.payload;
           } else {
@@ -40,17 +67,22 @@ export const provindeSlice = createSlice({
         });
       }
 
-      state.provinces = provincesNew;
-    },
-    remove: (state: ProvinceState, action: PayloadAction<number>) => {
-      const provincesNew = current(state.provinces).filter(
-        (e) => e.id !== action.payload
+      state.data = dataNew;
+      state.element = payload;
+    });
+
+    builder.addCase(removeAction.fulfilled, (state, action) => {
+      const provincesNew = current(state.data).filter(
+        (e) => e.id !== action.payload.id
       );
-      state.provinces = provincesNew;
-    }
+      state.data = provincesNew;
+    });
+
   }
 });
 
-export const { edit, save, remove } = provindeSlice.actions;
+*/
 
-export default provindeSlice.reducer;
+export const { add, edit } = provinceSlice.actions;
+
+export default provinceSlice.reducer;

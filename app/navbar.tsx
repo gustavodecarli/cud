@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { Fragment } from 'react';
 
 const navigation = [
-  { name: 'Provincias', href: '/province' },
+  { name: 'Tablas Basicas', href: '/configurate' },
   { name: 'Playground', href: '/playground' }
 ];
 
@@ -70,7 +70,10 @@ export default function Navbar({ user }: { user: any }) {
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
+                    <Menu.Button
+                      id="1"
+                      className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+                    >
                       <span className="sr-only">Open user menu</span>
                       <Image
                         className="h-8 w-8 rounded-full"
@@ -125,7 +128,10 @@ export default function Navbar({ user }: { user: any }) {
                 </Menu>
               </div>
               <div className="-mr-2 flex items-center sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
+                <Disclosure.Button
+                  id="2"
+                  className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
+                >
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -141,6 +147,7 @@ export default function Navbar({ user }: { user: any }) {
             <div className="space-y-1 pt-2 pb-3">
               {navigation.map((item) => (
                 <Disclosure.Button
+                  id={item.name}
                   key={item.name}
                   as="a"
                   href={item.href}

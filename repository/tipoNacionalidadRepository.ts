@@ -1,17 +1,22 @@
 import { BaseEntity } from 'typeorm';
 import { header } from '../helpers/api';
 
+const baseUrl = 'tiponacionalidad';
+
 export const fecth = async (page: number, search: string) => {
-  const response = await fetch(`/api/province?page=${page}&search=${search}`, {
-    headers: header(),
-    method: 'GET'
-  });
+  const response = await fetch(
+    `/api/${baseUrl}?page=${page}&search=${search}`,
+    {
+      headers: header(),
+      method: 'GET'
+    }
+  );
 
   return await response.json();
 };
 
 export const save = async (data: BaseEntity) => {
-  const response = await fetch('/api/province', {
+  const response = await fetch(`/api/${baseUrl}`, {
     headers: header(),
     method: 'POST',
     body: JSON.stringify({ data })
@@ -21,7 +26,7 @@ export const save = async (data: BaseEntity) => {
 };
 
 export const remove = async (data: number) => {
-  const response = await fetch('/api/province', {
+  const response = await fetch(`/api/${baseUrl}`, {
     headers: header(),
     method: 'DELETE',
     body: JSON.stringify(data)
@@ -33,7 +38,7 @@ export const remove = async (data: number) => {
 };
 
 export const getOne = async (id: string) => {
-  const response = await fetch(`/api/province/${id}`, {
+  const response = await fetch(`/api/${baseUrl}/${id}`, {
     headers: header(),
     method: 'GET'
   });

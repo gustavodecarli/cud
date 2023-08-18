@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getDataSource } from '../../../data-source';
-import { Province } from '../../../entity/Province';
+import { Nacionalidad } from '../../../entity/Nacionalidad';
 
 export default async function findOne(
   req: NextApiRequest,
@@ -10,7 +10,7 @@ export default async function findOne(
 
   const _id: number = Number(req.query.id);
 
-  const one = await AppDataSource.manager.findOne(Province, {
+  const one = await AppDataSource.manager.findOne(Nacionalidad, {
     where: {
       id: _id
     }

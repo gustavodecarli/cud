@@ -1,7 +1,6 @@
 import { Card, Title } from '@tremor/react';
 
 import { Province } from '../entity/Province';
-import Search from './search';
 
 import { getDataSource } from '../data-source';
 
@@ -22,7 +21,7 @@ export default async function indexPage({
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
       <Title>Provincias22</Title>
-      <Search />
+
       <Card className="mt-6"></Card>
     </main>
   );
