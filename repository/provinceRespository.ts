@@ -1,7 +1,7 @@
 import { Province } from '../entity/Province';
 
-export const getAll = async (page: number) => {
-  const response = await fetch(`/api/province?page=${page}`, {
+export const getAll = async (page: number, search: string) => {
+  const response = await fetch(`/api/province?page=${page}&search=${search}`, {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json'

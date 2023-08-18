@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { Like } from 'typeorm';
 import { getDataSource } from '../../../data-source';
 import { Province } from '../../../entity/Province';
 
@@ -49,16 +50,22 @@ async function remove(req: NextApiRequest, res: NextApiResponse) {
 }
 
 async function all(req: NextApiRequest, res: NextApiResponse) {
+  console.log('test', req.query);
+
   const take: number = Number(req.query.size) || 5;
   const page: number = Number(req.query.page) || 0;
+  const search: string = String(req.query.search);
 
   const AppDataSource = await getDataSource();
   const [result, total] = await AppDataSource.manager
     .getRepository(Province)
     .findAndCount({
       take: take,
-      skip: page * take
+      skip: page * take,
+      where: search ? { name: Like(`%${search}%`) } : {}
     });
+
+  console.log(result);
 
   const hasMore = page * take + take <= total;
 
