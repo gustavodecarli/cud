@@ -90,7 +90,7 @@ export default function Search<T>({
               />
             </div>
           </div>
-          <div className="flex flex-row  justify-start mt-5 ml-5">
+          <div className="flex flex-row  justify-start mt-5 ml-2">
             <Button size="xs" onClick={() => handleClick()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ export default function Search<T>({
                 />
               </svg>
             </Button>
-            <Button className="ml-5" size="xs" onClick={() => handleRefersh()}>
+            <Button className="ml-2" size="xs" onClick={() => handleRefersh()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

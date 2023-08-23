@@ -20,8 +20,7 @@ export default async function indexPage({
 
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
-      <Title>Provincias22</Title>
-
+      <Title></Title>
       <Card className="mt-6"></Card>
     </main>
   );

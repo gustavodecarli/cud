@@ -2,6 +2,7 @@ import { DataSource } from 'typeorm';
 import { Moneda } from './entity/Moneda';
 import { Nacionalidad } from './entity/Nacionalidad';
 import { Province } from './entity/Province';
+import { TipoDocumento } from './entity/TipoDocumento';
 import { TipoNacionalidad } from './entity/TipoNacionalidad';
 
 export const AppDataSource = new DataSource({
@@ -14,7 +15,7 @@ export const AppDataSource = new DataSource({
   port: 3306,
   synchronize: true,
   logging: false,
-  entities: [Province, Nacionalidad, TipoNacionalidad, Moneda],
+  entities: [Province, Nacionalidad, TipoNacionalidad, Moneda, TipoDocumento],
   subscribers: [],
   migrations: [],
   ssl: true,

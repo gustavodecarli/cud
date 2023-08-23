@@ -19,6 +19,10 @@ const data = [
   {
     name: 'Moneda',
     route: 'moneda'
+  },
+  {
+    name: 'Tipo Documento',
+    route: 'tipodocumento'
   }
 ];
 
