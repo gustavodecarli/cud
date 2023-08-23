@@ -1,4 +1,8 @@
-import { fetchAction, removeAction, saveAction } from '../actions/province';
+import {
+  fetchAction,
+  removeAction,
+  saveAction
+} from '../actions/tiponacionlidad';
 import { TipoNacionalidad } from '../entity/TipoNacionalidad';
 import { CRUDState } from '../interfaces/CRUDState';
 import crudReducer from './crudReducer';

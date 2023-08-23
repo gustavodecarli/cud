@@ -63,11 +63,11 @@ export default function Search<T>({
     <React.Fragment>
       <div>
         <div className="flex flex-row">
-          <div className="relative mt-5 max-w-md">
+          <div className="relative mt-5 justify-stretch">
             <label htmlFor="search" className="sr-only">
               Search
             </label>
-            <div className="rounded-md shadow-sm">
+            <div className="rounded shadow-sm w-64">
               <div
                 className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
                 aria-hidden="true"
@@ -84,19 +84,50 @@ export default function Search<T>({
                 value={search}
                 //  disabled={props.disabled}
                 className="h-10 block w-full rounded-md border border-gray-200 pl-9 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                placeholder="Search by name..."
+                placeholder="Buscar por codigo description..."
                 spellCheck={false}
                 onChange={(e) => handleSearch(e.target.value)}
               />
             </div>
           </div>
-          <div className="mt-5 flex items-center pl-3 ml-2 justify-center">
+          <div className="flex flex-row  justify-start mt-5 ml-5">
             <Button size="xs" onClick={() => handleClick()}>
-              Nuevo
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
             </Button>
-            <Button size="xs" onClick={() => handleRefersh()}>
-              Refresh
+            <Button className="ml-5" size="xs" onClick={() => handleRefersh()}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className={
+                  isFetching === true ? 'animate-spin w-6 h-6' : 'w-6 h-6'
+                }
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+                />
+              </svg>
             </Button>
+          </div>
+          <div className="flex flex-row w-full justify-end mt-5">
+            Page {page}
             <Button
               variant="secondary"
               onClick={() => setPage((old) => Math.max(old - 1, 0))}
@@ -115,8 +146,6 @@ export default function Search<T>({
             >
               Siguiente
             </Button>
-            {isFetching ? 'si' : 'no'}
-            Page {page}
           </div>
         </div>
 

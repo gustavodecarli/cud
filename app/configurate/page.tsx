@@ -15,6 +15,10 @@ const data = [
   {
     name: 'Tipo Nacionlidad',
     route: 'tiponacionalidad'
+  },
+  {
+    name: 'Moneda',
+    route: 'moneda'
   }
 ];
 
