@@ -13,11 +13,15 @@ import React from 'react';
 import { TipoOrientacionProfesional } from '../../../entity/TipoOrientacionProfesional';
 
 import { removeAction } from '../../../actions/tipoorientacionprofesional';
-import { edit } from '../../../reducers/tipoorientacionprofesionalReducer';
+import { edit } from '../../../reducers/tipoOrientacionProfesionalReducer';
 import DeleteButton from '../../components/form/buttonDelete';
 import EditButton from '../../components/form/buttonEdit';
 
-export default function TipoOrientacionProfesionalTable({ data }: { data: TipoOrientacionProfesional[] }) {
+export default function TipoOrientacionProfesionalTable({
+  data
+}: {
+  data: TipoOrientacionProfesional[];
+}) {
   return (
     <React.Fragment>
       <Table>

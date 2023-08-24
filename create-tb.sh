@@ -70,10 +70,16 @@ cp -R ./app/nacionalidad ${pathApp}
 chmod -R 777 ${pathApp}
 sed -i '' "s/nacionalidad/${name}/g" ${pathApp}/page.tsx
 sed -i '' "s/Nacionalidad/${Name}/g" ${pathApp}/page.tsx
+
 sed -i '' "s/nacionalidad/${name}/g" ${pathApp}/form/page.tsx
 sed -i '' "s/Nacionalidad/${Name}/g" ${pathApp}/form/page.tsx
+
 sed -i '' "s/nacionalidad/${name}/g" ${pathApp}/table/table.tsx
 sed -i '' "s/Nacionalidad/${Name}/g" ${pathApp}/table/table.tsx
+
+sed -i '' "s/${name}Reducer/${nAme}Reducer/g" ${pathApp}/page.tsx
+sed -i '' "s/${name}Reducer/${nAme}Reducer/g" ${pathApp}/table/table.tsx
+
 
 
 sed -i '' "s/\/\*IMPORTS\*\//import ${nAme}Reducer from '..\/reducers\/${nAme}Reducer';\r \/*IMPORTS*\//g" ./store/store.ts

@@ -13,11 +13,15 @@ import React from 'react';
 import { GradoAlfabetizacion } from '../../../entity/GradoAlfabetizacion';
 
 import { removeAction } from '../../../actions/gradoalfabetizacion';
-import { edit } from '../../../reducers/gradoalfabetizacionReducer';
+import { edit } from '../../../reducers/gradoAlfabetizacionReducer';
 import DeleteButton from '../../components/form/buttonDelete';
 import EditButton from '../../components/form/buttonEdit';
 
-export default function GradoAlfabetizacionTable({ data }: { data: GradoAlfabetizacion[] }) {
+export default function GradoAlfabetizacionTable({
+  data
+}: {
+  data: GradoAlfabetizacion[];
+}) {
   return (
     <React.Fragment>
       <Table>

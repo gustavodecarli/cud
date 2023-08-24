@@ -13,7 +13,7 @@ import React from 'react';
 import { TipoVivienda } from '../../../entity/TipoVivienda';
 
 import { removeAction } from '../../../actions/tipovivienda';
-import { edit } from '../../../reducers/tipoviviendaReducer';
+import { edit } from '../../../reducers/tipoViviendaReducer';
 import DeleteButton from '../../components/form/buttonDelete';
 import EditButton from '../../components/form/buttonEdit';
 

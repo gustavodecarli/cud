@@ -4,7 +4,7 @@ import { Card, Title } from '@tremor/react';
 
 import { useSelector } from 'react-redux';
 import { fetchAction } from '../../actions/estadocivil';
-import { add } from '../../reducers/estadocivilReducer';
+import { add } from '../../reducers/estadoCivilReducer';
 import { RootState } from '../../store/store';
 import Search from '../components/form/search';
 import EstadoCivilTable from './table/table';

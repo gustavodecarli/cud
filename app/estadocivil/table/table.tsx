@@ -13,7 +13,7 @@ import React from 'react';
 import { EstadoCivil } from '../../../entity/EstadoCivil';
 
 import { removeAction } from '../../../actions/estadocivil';
-import { edit } from '../../../reducers/estadocivilReducer';
+import { edit } from '../../../reducers/estadoCivilReducer';
 import DeleteButton from '../../components/form/buttonDelete';
 import EditButton from '../../components/form/buttonEdit';
 

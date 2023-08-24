@@ -4,13 +4,15 @@ import { Card, Title } from '@tremor/react';
 
 import { useSelector } from 'react-redux';
 import { fetchAction } from '../../actions/tipoorientacionprofesional';
-import { add } from '../../reducers/tipoorientacionprofesionalReducer';
+import { add } from '../../reducers/tipoOrientacionProfesionalReducer';
 import { RootState } from '../../store/store';
 import Search from '../components/form/search';
 import TipoOrientacionProfesionalTable from './table/table';
 
 export default function Page() {
-  const crudState = useSelector((state: RootState) => state.tipoorientacionprofesional);
+  const crudState = useSelector(
+    (state: RootState) => state.tipoorientacionprofesional
+  );
 
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">

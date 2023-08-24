@@ -13,11 +13,15 @@ import React from 'react';
 import { TipoEquipamiento } from '../../../entity/TipoEquipamiento';
 
 import { removeAction } from '../../../actions/tipoequipamiento';
-import { edit } from '../../../reducers/tipoequipamientoReducer';
+import { edit } from '../../../reducers/tipoEquipamientoReducer';
 import DeleteButton from '../../components/form/buttonDelete';
 import EditButton from '../../components/form/buttonEdit';
 
-export default function TipoEquipamientoTable({ data }: { data: TipoEquipamiento[] }) {
+export default function TipoEquipamientoTable({
+  data
+}: {
+  data: TipoEquipamiento[];
+}) {
   return (
     <React.Fragment>
       <Table>
