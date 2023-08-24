@@ -1,10 +1,14 @@
-import { Card, Title } from '@tremor/react';
+import { Title } from '@tremor/react';
 
 import { Province } from '../entity/Province';
 
 import { getDataSource } from '../data-source';
 
+import Image from 'next/image';
+
 export const dynamic = 'force-dynamic';
+
+import imageCUD from '../images/cud.jpeg';
 
 export default async function indexPage({
   searchParams
@@ -21,7 +25,7 @@ export default async function indexPage({
   return (
     <main className="p-4 md:p-10 mx-auto max-w-7xl">
       <Title></Title>
-      <Card className="mt-6"></Card>
+      <Image src={imageCUD} alt="" height={800} width={1600}></Image>
     </main>
   );
 }

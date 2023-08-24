@@ -9,7 +9,7 @@ import { Fragment } from 'react';
 
 const navigation = [
   { name: 'Tablas Basicas', href: '/configurate' },
-  { name: 'Estadistica', href: '/playground' }
+  { name: 'Estadisticas', href: '/playground' }
 ];
 
 function classNames(...classes: string[]) {
