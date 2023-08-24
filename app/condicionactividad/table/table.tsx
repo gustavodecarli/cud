@@ -13,11 +13,15 @@ import React from 'react';
 import { CondicionActividad } from '../../../entity/CondicionActividad';
 
 import { removeAction } from '../../../actions/condicionactividad';
-import { edit } from '../../../reducers/condicionactividadReducer';
+import { edit } from '../../../reducers/condicionActividadReducer';
 import DeleteButton from '../../components/form/buttonDelete';
 import EditButton from '../../components/form/buttonEdit';
 
-export default function CondicionActividadTable({ data }: { data: CondicionActividad[] }) {
+export default function CondicionActividadTable({
+  data
+}: {
+  data: CondicionActividad[];
+}) {
   return (
     <React.Fragment>
       <Table>

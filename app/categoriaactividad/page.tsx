@@ -4,7 +4,7 @@ import { Card, Title } from '@tremor/react';
 
 import { useSelector } from 'react-redux';
 import { fetchAction } from '../../actions/categoriaactividad';
-import { add } from '../../reducers/categoriaactividadReducer';
+import { add } from '../../reducers/categoriaActividadReducer';
 import { RootState } from '../../store/store';
 import Search from '../components/form/search';
 import CategoriaActividadTable from './table/table';

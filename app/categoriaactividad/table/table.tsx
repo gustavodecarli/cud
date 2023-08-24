@@ -13,11 +13,15 @@ import React from 'react';
 import { CategoriaActividad } from '../../../entity/CategoriaActividad';
 
 import { removeAction } from '../../../actions/categoriaactividad';
-import { edit } from '../../../reducers/categoriaactividadReducer';
+import { edit } from '../../../reducers/categoriaActividadReducer';
 import DeleteButton from '../../components/form/buttonDelete';
 import EditButton from '../../components/form/buttonEdit';
 
-export default function CategoriaActividadTable({ data }: { data: CategoriaActividad[] }) {
+export default function CategoriaActividadTable({
+  data
+}: {
+  data: CategoriaActividad[];
+}) {
   return (
     <React.Fragment>
       <Table>

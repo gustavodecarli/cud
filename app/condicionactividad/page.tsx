@@ -4,7 +4,7 @@ import { Card, Title } from '@tremor/react';
 
 import { useSelector } from 'react-redux';
 import { fetchAction } from '../../actions/condicionactividad';
-import { add } from '../../reducers/condicionactividadReducer';
+import { add } from '../../reducers/condicionActividadReducer';
 import { RootState } from '../../store/store';
 import Search from '../components/form/search';
 import CondicionActividadTable from './table/table';
