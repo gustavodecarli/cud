@@ -1,8 +1,7 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import CodigoDescripcion from './interfaces/CodigoDescripcion';
 
 @Entity()
-export class Nacionalidad extends BaseEntity implements CodigoDescripcion {
+export class TipoMatricula extends BaseEntity {
   @PrimaryGeneratedColumn('increment')
   id: number;
 

@@ -10,13 +10,18 @@ import {
   Text
 } from '@tremor/react';
 import React from 'react';
-import { EstadoCalle } from '../../../entity/EstadoCalle';
+import { TipoMatricula } from '../../../entity/TipoMatricula';
 
-import { removeAction } from '../../../actions/estadocalle';
-import { edit } from '../../../reducers/estadoCalleReducer';
-import ButtonCRUD from '../../components/form/buttonCRUD';
+import { removeAction } from '../../../actions/tipomatricula';
+import { edit } from '../../../reducers/tipoMatriculaReducer';
+import DeleteButton from '../../components/form/buttonDelete';
+import EditButton from '../../components/form/buttonEdit';
 
-export default function EstadoCalleTable({ data }: { data: EstadoCalle[] }) {
+export default function TipoMatriculaTable({
+  data
+}: {
+  data: TipoMatricula[];
+}) {
   return (
     <React.Fragment>
       <Table>
@@ -37,11 +42,11 @@ export default function EstadoCalleTable({ data }: { data: EstadoCalle[] }) {
                 <Text>{entidad.descripcion}</Text>
               </TableCell>
               <TableCell width={30} className="p-4">
-                <ButtonCRUD
+                <EditButton id={entidad.id} edit={edit}></EditButton>
+                <DeleteButton
                   id={entidad.id}
-                  editAction={edit}
                   removeAction={removeAction}
-                />
+                ></DeleteButton>
               </TableCell>
             </TableRow>
           ))}

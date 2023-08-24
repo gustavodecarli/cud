@@ -9,7 +9,7 @@ import { Province } from './entity/Province';
 import { TipoDocumento } from './entity/TipoDocumento';
 import { TipoNacionalidad } from './entity/TipoNacionalidad';
 import { TipoResidencia } from './entity/TipoResidencia';
-import {TipoTelefono} from './entity/TipoTelefono'; import {TipoEquipamiento} from './entity/TipoEquipamiento'; import {TipoDeficiencia} from './entity/TipoDeficiencia'; import {TipoOrientacionProfesional} from './entity/TipoOrientacionProfesional'; import {TipoVivienda} from './entity/TipoVivienda'; import {EstadoCalle} from './entity/EstadoCalle'; import {Vinculos} from './entity/Vinculos'; import {GradoAlfabetizacion} from './entity/GradoAlfabetizacion'; import {CondicionActividad} from './entity/CondicionActividad'; import {CategoriaActividad} from './entity/CategoriaActividad'; /*MODELOS*/
+import {TipoTelefono} from './entity/TipoTelefono'; import {TipoEquipamiento} from './entity/TipoEquipamiento'; import {TipoDeficiencia} from './entity/TipoDeficiencia'; import {TipoOrientacionProfesional} from './entity/TipoOrientacionProfesional'; import {TipoVivienda} from './entity/TipoVivienda'; import {EstadoCalle} from './entity/EstadoCalle'; import {Vinculos} from './entity/Vinculos'; import {GradoAlfabetizacion} from './entity/GradoAlfabetizacion'; import {CondicionActividad} from './entity/CondicionActividad'; import {CategoriaActividad} from './entity/CategoriaActividad'; import {TipoMatricula} from './entity/TipoMatricula'; /*MODELOS*/
 
 export const AppDataSource = new DataSource({
   type: 'mysql',
@@ -21,7 +21,7 @@ export const AppDataSource = new DataSource({
   port: 3306,
   synchronize: true,
   logging: false,
-  entities: [    CategoriaActividad,    CondicionActividad,    GradoAlfabetizacion,    Vinculos,    EstadoCalle,    TipoVivienda,    TipoOrientacionProfesional,    TipoDeficiencia,    TipoEquipamiento,    TipoTelefono,
+  entities: [    TipoMatricula,    CategoriaActividad,    CondicionActividad,    GradoAlfabetizacion,    Vinculos,    EstadoCalle,    TipoVivienda,    TipoOrientacionProfesional,    TipoDeficiencia,    TipoEquipamiento,    TipoTelefono,
     Genero,
     EstadoCivil,
     Localidad,

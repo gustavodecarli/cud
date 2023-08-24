@@ -19,7 +19,7 @@ import tipoResidenciaReducer from '../reducers/tipoResidenciaReducer';
 import tipoTelefonoReducer from '../reducers/tipoTelefonoReducer';
 import tipoViviendaReducer from '../reducers/tipoViviendaReducer';
 import vinculosReducer from '../reducers/vinculosReducer';
-/*IMPORTS*/
+import tipoMatriculaReducer from '../reducers/tipoMatriculaReducer'; /*IMPORTS*/
 
 export const store = configureStore({
   reducer: {
@@ -42,7 +42,7 @@ export const store = configureStore({
     gradoalfabetizacion: gradoAlfabetizacionReducer,
     condicionactividad: condicionActividadReducer,
     categoriaactividad: categoriaActividadReducer,
-    /*REDUCERS*/
+    tipomatricula: tipoMatriculaReducer,    /*REDUCERS*/
     app: appReducer
   }
 });

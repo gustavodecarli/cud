@@ -90,6 +90,10 @@ const data = [
   {
     name: 'CategoriaActividad',
     route: 'categoriaactividad'
+  },
+  {
+    name: 'TipoMatricula',
+    route: 'tipomatricula'
   }
   /*MENUS*/
 ];
