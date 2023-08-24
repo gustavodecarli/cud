@@ -13,11 +13,15 @@ import React from 'react';
 import { TipoDocumento } from '../../../entity/TipoDocumento';
 
 import { removeAction } from '../../../actions/tipodocumento';
-import { edit } from '../../../reducers/tipodocumentoReducer';
+import { edit } from '../../../reducers/tipoDocumentoReducer';
 import DeleteButton from '../../components/form/buttonDelete';
 import EditButton from '../../components/form/buttonEdit';
 
-export default function TipoDocumentoTable({ data }: { data: TipoDocumento[] }) {
+export default function TipoDocumentoTable({
+  data
+}: {
+  data: TipoDocumento[];
+}) {
   return (
     <React.Fragment>
       <Table>

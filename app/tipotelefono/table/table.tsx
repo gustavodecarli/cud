@@ -13,7 +13,7 @@ import React from 'react';
 import { TipoTelefono } from '../../../entity/TipoTelefono';
 
 import { removeAction } from '../../../actions/tipotelefono';
-import { edit } from '../../../reducers/tipotelefonoReducer';
+import { edit } from '../../../reducers/tipoTelefonoReducer';
 import DeleteButton from '../../components/form/buttonDelete';
 import EditButton from '../../components/form/buttonEdit';
 
