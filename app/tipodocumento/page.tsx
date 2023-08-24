@@ -4,7 +4,7 @@ import { Card, Title } from '@tremor/react';
 
 import { useSelector } from 'react-redux';
 import { fetchAction } from '../../actions/tipodocumento';
-import { add } from '../../reducers/tipodocumentoReducer';
+import { add } from '../../reducers/tipoDocumentoReducer';
 import { RootState } from '../../store/store';
 import Search from '../components/form/search';
 import TipoDocumentoTable from './table/table';

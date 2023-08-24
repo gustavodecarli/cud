@@ -23,7 +23,24 @@ const data = [
   {
     name: 'Tipo Documento',
     route: 'tipodocumento'
+  },
+  {
+    name: 'TipoResidencia',
+    route: 'tiporesidencia'
+  },
+  {
+    name: 'Localidad',
+    route: 'localidad'
+  },
+  {
+    name: 'EstadoCivil',
+    route: 'estadocivil'
+  },
+  {
+    name: 'Genero',
+    route: 'genero'
   }
+  , {  name: 'TipoTelefono',  route: 'tipotelefono' }, , {  name: 'TipoEquipamiento',  route: 'tipoequipamiento' }, , {  name: 'TipoDeficiencia',  route: 'tipodeficiencia' }, , {  name: 'TipoOrientacionProfesional',  route: 'tipoorientacionprofesional' }, , {  name: 'TipoVivienda',  route: 'tipovivienda' }, , {  name: 'EstadoCalle',  route: 'estadocalle' }, , {  name: 'Vinculos',  route: 'vinculos' }, , {  name: 'GradoAlfabetizacion',  route: 'gradoalfabetizacion' }, , {  name: 'CondicionActividad',  route: 'condicionactividad' }, , {  name: 'CategoriaActividad',  route: 'categoriaactividad' }, /*MENUS*/
 ];
 
 export default function PlaygroundPage() {

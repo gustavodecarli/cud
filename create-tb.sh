@@ -76,5 +76,13 @@ sed -i '' "s/nacionalidad/${name}/g" ${pathApp}/table/table.tsx
 sed -i '' "s/Nacionalidad/${Name}/g" ${pathApp}/table/table.tsx
 
 
-#sed -i '' "s/\/\*\*\//${name}: ${name}Reducer,$CR \/**\//g" ./store/store.ts
+sed -i '' "s/\/\*IMPORTS\*\//import ${nAme}Reducer from '..\/reducers\/${nAme}Reducer';\r \/*IMPORTS*\//g" ./store/store.ts
+sed -i '' "s/\/\*REDUCERS\*\//${name}: ${nAme}Reducer,\r    \/*REDUCERS*\//g" ./store/store.ts
+
+
+sed -i '' "s/\/\*MENUS\*\//, {\r  name: '${Name}',\r  route: '${name}'\r },\r \/*MENUS*\//g" ./app/configurate/page.tsx
+
+sed -i '' "s/\/\*MODELOS\*\//import {${Name}} from '.\/entity\/${Name}';\r \/*MODELOS*\//g" ./ormconfig.ts
+sed -i '' "s/entities\: \[/entities\: \[\r    ${Name},/g" ./ormconfig.ts
+
 
