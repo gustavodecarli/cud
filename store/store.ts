@@ -9,17 +9,19 @@ import gradoAlfabetizacionReducer from '../reducers/gradoAlfabetizacionReducer';
 import localidadReducer from '../reducers/localidadReducer';
 import monedaReducer from '../reducers/monedaReducer';
 import nacionalidadReducer from '../reducers/nacionalidadReducer';
+import paisReducer from '../reducers/paisReducer';
 import provinceReducer from '../reducers/provinceReducer';
 import tipoDeficienciaReducer from '../reducers/tipoDeficienciaReducer';
 import tipoDocumentoReducer from '../reducers/tipoDocumentoReducer';
 import tipoEquipamientoReducer from '../reducers/tipoEquipamientoReducer';
+import tipoMatriculaReducer from '../reducers/tipoMatriculaReducer';
 import tipoNacionalidadReducer from '../reducers/tipoNacionalidadReducer';
 import tipoOrientacionProfesionalReducer from '../reducers/tipoOrientacionProfesionalReducer';
 import tipoResidenciaReducer from '../reducers/tipoResidenciaReducer';
 import tipoTelefonoReducer from '../reducers/tipoTelefonoReducer';
 import tipoViviendaReducer from '../reducers/tipoViviendaReducer';
 import vinculosReducer from '../reducers/vinculosReducer';
-import tipoMatriculaReducer from '../reducers/tipoMatriculaReducer'; /*IMPORTS*/
+/*IMPORTS*/
 
 export const store = configureStore({
   reducer: {
@@ -42,7 +44,9 @@ export const store = configureStore({
     gradoalfabetizacion: gradoAlfabetizacionReducer,
     condicionactividad: condicionActividadReducer,
     categoriaactividad: categoriaActividadReducer,
-    tipomatricula: tipoMatriculaReducer,    /*REDUCERS*/
+    tipomatricula: tipoMatriculaReducer,
+    pais: paisReducer,
+    /*REDUCERS*/
     app: appReducer
   }
 });

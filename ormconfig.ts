@@ -9,6 +9,7 @@ import { GradoAlfabetizacion } from './entity/GradoAlfabetizacion';
 import { Localidad } from './entity/Localidad';
 import { Moneda } from './entity/Moneda';
 import { Nacionalidad } from './entity/Nacionalidad';
+import { Pais } from './entity/Pais';
 import { Province } from './entity/Province';
 import { TipoDeficiencia } from './entity/TipoDeficiencia';
 import { TipoDocumento } from './entity/TipoDocumento';
@@ -33,6 +34,7 @@ export const AppDataSource = new DataSource({
   synchronize: false,
   logging: true,
   entities: [
+    Pais,
     TipoMatricula,
     CategoriaActividad,
     CondicionActividad,

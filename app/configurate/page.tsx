@@ -94,6 +94,10 @@ const data = [
   {
     name: 'TipoMatricula',
     route: 'tipomatricula'
+  },
+  {
+    name: 'Pais',
+    route: 'pais'
   }
   /*MENUS*/
 ];
