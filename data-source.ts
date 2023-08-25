@@ -4,7 +4,6 @@ import { AppDataSource } from './ormconfig';
 AppDataSource.initialize()
   .then(async () => {
     console.debug('Connection initialized with database...');
-    await AppDataSource.synchronize();
   })
   .catch((error) => console.error(error));
 
